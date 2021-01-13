@@ -7,9 +7,9 @@ class Person(models.Model):
     lastName_text = models.CharField(max_length=20)
     fullName_text = models.CharField(max_length=50)
     NickName_text = models.CharField(max_length=10)
-    phone_field = models.IntegerField()
-    image = models.ImageField()
-    aboutMe = models.TextField()
+    phone_field = models.CharField(max_length=15, null=True)
+    image = models.ImageField(null=True)
+    aboutMe = models.TextField(null=True)
     line = models.CharField(max_length=10)
 
     def __str__(self):
