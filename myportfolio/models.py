@@ -8,9 +8,9 @@ class Person(models.Model):
     fullName_text = models.CharField(max_length=50)
     NickName_text = models.CharField(max_length=10)
     phone_field = models.CharField(max_length=15, null=True)
-    image = models.ImageField(null=True)
+    image = models.ImageField(null=True, upload_to='pictureUpload')
     aboutMe = models.TextField(null=True)
-    line = models.CharField(max_length=10)
+    line = models.CharField(max_length=10, null=True)
 
     def __str__(self):
         return self.fullName_text
@@ -32,7 +32,7 @@ class WorkDuration(models.Model):
     duration_field = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.email_field
+        return self.duration_field
 
 class Work(models.Model):
     workDuration = models.ForeignKey(WorkDuration, on_delete=models.CASCADE)
