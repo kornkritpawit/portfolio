@@ -11,4 +11,4 @@ admin.site.register(Work)
 admin.site.register(FrontendSkill)
 admin.site.register(BackendSkill)
 admin.site.register(ProgrammingLanguage)
-
+admin.site.register(ContactUs)

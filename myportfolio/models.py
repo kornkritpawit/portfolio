@@ -63,4 +63,10 @@ class ProgrammingLanguage(models.Model):
     def __str__(self):
         return self.skill_text
 
+class ContactUs(models.Model):
+    email = models.EmailField()
+    subject = models.CharField(max_length=50)
+    message = models.TextField()
 
+    def __str__(self):
+        return self.subject
