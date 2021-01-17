@@ -1,0 +1,32 @@
+
+
+body {
+  /* background-color: #add8e6; */
+}
+
+.myimage {
+  height: 500px;
+ }
+
+.contact-image {
+  width: 60px
+}
+
+.about-me{
+  height:auto
+}
+
+.card{
+  /* width:100% */
+}
+
+.copyright{
+  
+}
+
+
+@media (min-width: 576px){
+  .contact-image{
+    width: 100px
+  }
+}

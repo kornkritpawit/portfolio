@@ -1,12 +1,280 @@
 {% load static %}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <!-- <link rel="stylesheet" type="text/css" href="{% static 'myportfolio/bootstrap.css' %}"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="{% static 'myportfolio/css/mycss.css' %}">
+  <title>Korn's portfolio</title>
 </head>
+
 <body>
-  test
+  <header>
+    <nav class="shadow fixed-top navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container">
+        <a class="fs-4 fw-bold navbar-brand" href="#">Kritpawit</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+          <ul class="navbar-nav float-end bg-sm-info float-end">
+            <li class="nav-item fs-5">
+              <a class="nav-link" aria-current="page" href="#about-me">About me</a>
+            </li>
+            <li class="nav-item fs-5">
+              <a class="nav-link" href="#my-project">Work</a>
+            </li>
+            <li class="nav-item fs-5">
+              <a class="nav-link" href="#contact-me">Contact me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="">
+    <div id="about-me" class="about-me container mt-5">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="pt-5 ">
+            <h3 class="mb-2">About me</h3>
+            <h6 class="fw-bold">Kritpawit Soongswang</h6>
+            <p>Hello, my name is Korn. I am a junior software engineering
+              student at Kasetsart University. I am
+              enjoyed working in Frontend and
+              Backend web development. I have some
+              experience on working as a team at my
+              university and internship. I am
+              passionate about seeking an internship.
+              Moreover, I want to enhance my skills
+              and develop myself to be a great
+              software developer simultaneously
+              during an internship</p>
+          </div>
+        </div>
+        <div class="col mb-4 ms-lg-5">
+          <div class="myimage pt-lg-5 mb-lg-5">
+            <img class="img-thumbnail myimage" src="{% static 'myportfolio/image/korn2.jpg' %}" alt=" profile image">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div id="my-project" class="container">
+      <hr>
+      <div class="pt-lg-2 d-flex justify-content-between">
+        <h3 class="mr-auto">My Projects</h3>
+        <a href="https://github.com/kornkritpawit?tab=repositories">See more</a>
+      </div>
+      <div class="row">
+        <div class="mt-4">
+          <h5>Year 2018</h5>
+        </div>
+        <div class="col-12 col-md mb-3 mb-sm-auto">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Cinema booking</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Python</h6>
+              <p class="card-text">Simple cinema booking app project playing in console using Python</p>
+              <a target="_blank" href="https://github.com/kornkritpawit/CinemaProjectYear1sem1" class="card-link">See
+                more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md mb-3 mb-sm-auto">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Brick breaker</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Python</h6>
+              <p class="card-text">Python 2D game using arcade library in Python</p>
+              <a target="_blank" href="https://github.com/kornkritpawit/Gameproject" class="card-link">See more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md mb-3 mb-sm-auto">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Depression tracker</h5>
+              <h6 class="card-subtitle mb-2 text-muted">HTML CSS Javascript</h6>
+              <p class="card-text">Simple prototype web project for tracking depressed patients in exceed camp 2018</p>
+              <a target="_blank" href="https://github.com/kornkritpawit/Exceed-camp-project" class="card-link">See
+                more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div>
+          <h5>Year 2019</h5>
+        </div>
+        <div class="col-12 col-md mb-3 mb-sm-auto">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">league of saras</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Python, Django, HTML, CSS, JS</h6>
+              <p class="card-text">Guessing game web application group project based on Django</p>
+              <a target="_blank" href="https://github.com/Klan300/league_of_saras" class="card-link">See more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md mb-3 mb-sm-auto">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Guessing game</h5>
+              <h6 class="card-subtitle mb-2 text-muted">NodeJs, HTML, CSS, MongoDB</h6>
+              <p class="card-text">Guessing game individual project using Node and mongoDB for database subject</p>
+              <a target="_blank" href="https://github.com/kornkritpawit/Guessing-game" class="card-link">See
+                more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md mb-3 mb-sm-auto">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">CMS</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Vue, SASS, JS</h6>
+              <p class="card-text">Front end for content management system of INOX Company (during internship)</p>
+              <a target="_blank" href="" class="card-link">See
+                more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div>
+          <h5>Year 2020</h5>
+        </div>
+        <div class="col-12 col-md mb-3 mb-sm-auto">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Covid situation around the world</h5>
+              <h6 class="card-subtitle mb-2 text-muted">NodeJs, HTML, CSS, JS, Jenkins, NodeRed, Docker</h6>
+              <p class="card-text">Group project web application for monitoring covid19 infection
+                around the world</p>
+              <a target="_blank" href="https://github.com/SukritaEarn/Covid19WorldSituation" class="card-link">See
+                more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md mb-3 mb-sm-auto">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">PMK</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Vue, Python, Flask, MySQL, GraphQL, OpenAPI</h6>
+              <p class="card-text">Pokemon go pokedex(wiki) group project web application</p>
+              <a target="_blank"
+                href="https://drive.google.com/file/d/1hCuFT23IDaYKepE8brbCfbZp5zv3pi6c/view?usp=sharing"
+                class="card-link">See
+                more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md mb-3 mb-sm-auto">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Japan Tourism</h5>
+              <h6 class="card-subtitle mb-2 text-muted">OWL</h6>
+              <p class="card-text">Japan tourism knowledge base using onthology implementing in protege</p>
+              <a target="_blank" href="https://github.com/kornkritpawit/JapanTourismOnthology" class="card-link">See
+                more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact-me" class="container mt-4 mb-lg-5">
+      <hr>
+      <h3>Contact me</h3>
+      <div class="row">
+        <div class="col mb-4">
+          <div class="contact p-lg-5 mt-lg-5 mt-3 d-flex flex-wrap justify-content-around">
+            <div class="image-item mb-4 mx-2">
+              <a href="mailto:konsoo@hotmail.com"><img class="contact-image"
+                  src="{% static 'myportfolio/image/message.svg' %}" alt="Message icon"></a>
+            </div>
+            <div class="image-item mb-4 mx-2">
+              <a target="_blank" href="https://www.facebook.com/korn.soongswang/">
+                <img class="contact-image" src="{% static 'myportfolio/image/facebook.svg' %}" alt="Facebook icon">
+              </a>
+            </div>
+            <div class="image-item mb-4 mx-2">
+              <a target="_blank" href="https://www.instagram.com/kornkritpawit/">
+                <img class="contact-image" src="{% static 'myportfolio/image/instagram.svg' %}" alt="Instagram icon">
+              </a>
+            </div>
+            <div class="image-item mb-4 mx-2">
+              <a target="_blank" href="https://github.com/kornkritpawit">
+                <img class="contact-image" src="{% static 'myportfolio/image/github.svg' %}" alt="Github icon">
+              </a>
+            </div>
+            <div class="image-item mb-4 mx-2">
+              <a target="_blank" href="https://www.linkedin.com/in/kritpawit-soongswang-9bb7621a4/">
+                <img class="contact-image" src="{% static 'myportfolio/image/linkedin.svg' %}" alt="Linkedin icon">
+              </a>
+            </div>
+            <div class="image-item mb-4 mx-2">
+              <a target="_blank" href="http://line.me/ti/p/~konsw">
+                <img class="contact-image" src="{% static 'myportfolio/image/line.svg' %}" alt="Linkedin icon">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <form class="border rounded p-3 p-lg-4">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <hr>
+      <div class="copyright text-center p-5">&copy; Copyright 2021, Kritpawit Soongswang</div>
+    </div>
+
+  </footer>
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+
+
 </body>
+
 </html>
