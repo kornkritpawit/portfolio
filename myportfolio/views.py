@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
-from django.core.mail import send_mail, BadHeaderError
+from django.core.mail import send_mail, BadHeaderError, EmailMessage
 from .models import ContactUs
 # Create your views here.
 from .forms import *
@@ -20,6 +20,10 @@ def index(request):
             from_email = form.cleaned_data['from_email']
             message = form.cleaned_data['message']
             contact = ContactUs(email=from_email, subject=subject, message=message)            
+            message = "{0} has sent you a new message:\n\n{1}".format(from_email, form.cleaned_data['message']) 
+            send_mail(subject, message, from_email, ['konsoo@hotmail.com', 'kritpawit.s@ku.th'], fail_silently=False)
+            # msg = EmailMessage('test', "message", to=['konsoo@hotmail.com', 'kritpawit.s@ku.th'])
+            # msg.send()
             try:
               contact.save()
               print('successful')

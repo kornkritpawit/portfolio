@@ -121,3 +121,17 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = '/home/kornkritpawit/portfolio/static'
+
+if not DEBUG:
+    from .local_settings import EMAIL_HOST_PASSWORD
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST_USER = 'kritpawit.s@ku.th'
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+    EMAIL_USE_SSL = False
+    EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
+
+else:
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
